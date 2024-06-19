@@ -1,0 +1,397 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+ 
+
+ @font-face {
+    font-family: "TwitterChirp";
+    src: url("../fonts/chirp-regular-web.woff") format("woff2"),
+         url("../fonts/chirp-bold-web.woff") format("woff"),
+         url("../fonts/chirp-heavy-web.woff") format("woff");
+}
+
+html{
+    font-family: TwitterChirp, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root{
+    --twitter-theme-color: #50b7f5;
+    --twitter-background-color: #e6ecf0;
+}
+
+.nav_logo{
+    width: 50px;
+    height: 30px;
+    color: var(--twitter-theme-color);
+    fill: currentColor;
+}
+
+.Menu_options{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.Menu_options .material-icons{
+    padding: 20px;
+}
+
+.Menu_options h2{
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.Menu_options a{
+    color: black;
+    text-decoration: none;
+}
+
+.Menu_options:hover{
+    background-color: var(--twitter-background-color);
+    border-radius: 30px;
+    color: var(--twitter-theme-color);
+}
+
+.tweet_btn{
+    width: 100%;
+    background-color: var(--twitter-theme-color);
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    height: 50px;
+}
+
+.main {
+    margin-right: auto;
+    display: flex;
+    height: 100vh;
+    max-width: 1300px;
+    margin-left: auto;
+    padding: 0 10px;
+}
+
+nav{
+    flex: 0.2;
+    border-right: 1px solid var(--twitter-background-color);
+    min-width: 250px;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* == menu section */
+
+main{
+    border-right: 1px solid var(--twitter-background-color);
+    min-width: 700px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 10;
+    border: 1px solid var(--twitter-background-color);
+    padding: 15px 20px;
+
+}
+
+main::-webkit-scrollbar{
+    display: none;
+
+}
+
+.header h2{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.tweet_box {
+    padding-bottom: 10px;
+    border-bottom: 8px solid var(--twitter-background-color);
+    padding-right: 10px;
+}
+
+.tweet_box form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.tweet_box-input {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    border: 1px solid #e1e8ed;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: #f5f8fa;
+}
+
+.tweet_box-input img {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.tweet_input {
+    flex: 1;
+    margin-left: 20px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    resize: none;
+    height: 80px; /* Увеличенная высота */
+    padding: 10px 0;
+}
+
+.tweet_input::placeholder {
+    color: #657786;
+}
+
+.tweet_box-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.file-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--twitter-theme-color);
+    transition: color 0.3s;
+}
+
+.file-label:hover {
+    color: #1a8cd8;
+}
+
+.file-label svg {
+    width: 24px;
+    height: 24px;
+}
+
+.hidden {
+    display: none;
+}
+
+.tweet_button {
+    background-color: var(--twitter-theme-color);
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tweet_button:hover {
+    background-color: #1a8cd8;
+}
+.post_profile-image img{
+    border-radius: 50%;
+    height: 40px;
+
+}
+
+.post{
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--twitter-background-color);
+    padding-bottom: 10px;
+    max-width: 620px;
+}
+
+.post_body img{
+    width: 450px;
+    object-fit: contain;
+    border-radius: 20px;
+
+}
+
+.post_footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+
+}
+
+.post_badge{
+    font-size: 14px !important;
+    color: var(--twitter-theme-color);
+    margin-right: 5px;
+
+}
+
+.header-icon-section{
+    font-weight: 600;
+    font-size: 12px;
+    color: grey;
+}
+
+.post_header-text h3{
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: bold;
+
+}
+
+.post_header-text h3:hover{
+    text-decoration:underline;
+}
+
+.post_header-discription{
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.post_body{ 
+    flex: 1;
+    padding: 10px;
+}
+
+.post_profile-image{
+    padding: 20px;
+}
+
+
+/* == aside  */
+
+
+.aside_container{
+    margin-top: 15px;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: #f5f8fa;
+    border-radius: 20px;
+}
+    
+.aside_container h2{
+    font-size: 18px;
+    font-weight: 800;
+}arch-icon{
+    color: gray;
+}
+
+.aside_container{
+    margin-top: 15px;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: #f5f8fa;
+    border-radius: 20px;
+}
+
+.aside_container h2{
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.aside_input{
+    display: flex;
+    align-items: center;
+    background-color: var(--twitter-background-color);
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.aside_input input{
+    border: none;
+    background-color: var(--twitter-background-color);
+    outline: none;
+}
+
+.aside_search-icon{
+    color: gray;
+}
+
+.profile_img img{
+    border-radius: 50%;
+    height: 40px;
+    margin: 0 10px 0 0;
+}
+
+.twitter-tweet {
+    margin: 10px 0 ;
+}
+
+aside a {
+    font-weight: bold;
+}
+
+aside a:hover {
+    text-decoration: underline;
+}
+
+.inRow {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 900px) {
+    main, aside {
+        margin-top: 85px;
+    }
+    main {
+        min-width: 500px;
+    }
+
+    
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        border: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        background-color: white;
+        z-index: 1000;
+        padding: 0;
+        
+    }
+    .Menu_options h2 {
+        font-size: 15px;
+        margin-right: 10px;
+    }
+    .Menu_options .material-icons {
+        padding: 10px;
+
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .Menu_options h2 {
+        font-size: 10px;
+    }
+    aside {
+        display: none;
+    }
+    main {
+        width: 100%;
+    }
+  }
